@@ -6,7 +6,7 @@ set(CMAKE_CXX_COMPILER_ID GNU)
 
 # Some default GCC settings
 # arm-none-eabi- must be part of path environment
-set(TOOLCHAIN_PREFIX                "E:/Program Files/STM32CubeCLT_1.18.0/GNU-tools-for-STM32/bin/arm-none-eabi-")
+set(TOOLCHAIN_PREFIX                "arm-none-eabi-")
 
 set(CMAKE_C_COMPILER                ${TOOLCHAIN_PREFIX}gcc.exe)
 set(CMAKE_ASM_COMPILER              ${CMAKE_C_COMPILER})
