@@ -97,6 +97,13 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+    for (uint8_t i = 0; i < 8; i++)
+    {
+      HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3 | GPIO_PIN_4 | GPIO_PIN_5 | GPIO_PIN_6 | GPIO_PIN_7, GPIO_PIN_SET);     // 拉高PA0~PA7（熄灭所有灯）
+      HAL_GPIO_WritePin(GPIOA, (uint16_t)(0x0001 << i), GPIO_PIN_RESET);     // 拉低PA0~PA7中的第i个（点亮对应灯）
+      HAL_Delay(500);
+    }
+
   }
   /* USER CODE END 3 */
 }
